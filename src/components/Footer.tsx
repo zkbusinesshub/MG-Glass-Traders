@@ -17,13 +17,97 @@ export default function Footer({ setActiveTab }: FooterProps) {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Company Brief */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 cursor-pointer" onClick={() => handleNavClick('home')}>
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600 shadow-lg">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                MG <span className="text-blue-500">GLASS</span>
-              </span>
+            <div className="flex items-center cursor-pointer select-none" onClick={() => handleNavClick('home')}>
+              <svg viewBox="0 0 320 80" className="h-12 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  {/* Silver metallic gradient for M */}
+                  <linearGradient id="footer-silver-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#FFFFFF" />
+                    <stop offset="25%" stopColor="#E2E8F0" />
+                    <stop offset="50%" stopColor="#CBD5E1" />
+                    <stop offset="75%" stopColor="#94A3B8" />
+                    <stop offset="100%" stopColor="#475569" />
+                  </linearGradient>
+                  
+                  {/* Metallic Blue gradient for G */}
+                  <linearGradient id="footer-blue-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#38BDF8" />
+                    <stop offset="50%" stopColor="#0284C7" />
+                    <stop offset="100%" stopColor="#0369A1" />
+                  </linearGradient>
+                </defs>
+
+                {/* Blue Car Silhouette/Arch */}
+                <path 
+                  d="M 5 35 Q 45 10 95 12 Q 135 13 175 25 Q 160 27 145 27 Q 105 18 65 18 Q 30 18 5 35" 
+                  fill="#0EA5E9" 
+                />
+                
+                {/* Metallic 'M' in MG */}
+                <text 
+                  x="3" 
+                  y="58" 
+                  fontFamily="system-ui, -apple-system, sans-serif" 
+                  fontSize="44" 
+                  fontWeight="900" 
+                  fontStyle="italic" 
+                  fill="url(#footer-silver-grad)"
+                  style={{ letterSpacing: '-2px' }}
+                >
+                  M
+                </text>
+                
+                {/* Metallic 'G' in MG */}
+                <text 
+                  x="42" 
+                  y="58" 
+                  fontFamily="system-ui, -apple-system, sans-serif" 
+                  fontSize="44" 
+                  fontWeight="900" 
+                  fontStyle="italic" 
+                  fill="url(#footer-blue-grad)"
+                  style={{ letterSpacing: '-2px' }}
+                >
+                  G
+                </text>
+
+                {/* "MG GLASS TRADERS" Text */}
+                <text 
+                  x="105" 
+                  y="40" 
+                  fontFamily="system-ui, -apple-system, sans-serif" 
+                  fontSize="18" 
+                  fontWeight="900" 
+                  fill="#F8FAFC" 
+                  style={{ letterSpacing: '0.5px' }}
+                >
+                  MG GLASS
+                </text>
+                <text 
+                  x="200" 
+                  y="40" 
+                  fontFamily="system-ui, -apple-system, sans-serif" 
+                  fontSize="18" 
+                  fontWeight="900" 
+                  fill="#0EA5E9" 
+                  style={{ letterSpacing: '0.5px' }}
+                >
+                  TRADERS
+                </text>
+
+                {/* Subtext tagline */}
+                <text 
+                  x="105" 
+                  y="58" 
+                  fontFamily="system-ui, -apple-system, sans-serif" 
+                  fontSize="7.5" 
+                  fontWeight="700" 
+                  fill="#64748B" 
+                  style={{ letterSpacing: '1.2px' }}
+                >
+                  YOUR TRUSTED AUTOMOTIVE GLASS SOLUTION
+                </text>
+              </svg>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
               Your trusted automotive glass and vehicle mirror repair partner in Hyderabad. Offering premium, certified glass installations for luxury, executive, commercial, and utility vehicles.
@@ -79,11 +163,11 @@ export default function Footer({ setActiveTab }: FooterProps) {
             <h3 className="text-white font-semibold text-base mb-4 tracking-wider uppercase text-xs">Get In Touch</h3>
             <div className="flex items-start space-x-2 text-sm">
               <MapPin className="h-5 w-5 text-blue-500 shrink-0 mt-0.5" />
-              <span>Mallapally Road, Nampally, Hyderabad, Telangana - 500001</span>
+              <span>Door No. 4-8-121/A, Pillar No. 143, PV Narasimha Rao Expressway, Attapur, Hyderabad, TS - 500048</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Phone className="h-4 w-4 text-blue-500" />
-              <a href="tel:+919876543210" className="hover:text-blue-400 transition">+91 98765 43210</a>
+              <a href="tel:+919324187807" className="hover:text-blue-400 transition">+91 93241 87807</a>
             </div>
             <div className="flex items-center space-x-2 text-sm">
               <Mail className="h-4 w-4 text-blue-500" />
@@ -91,7 +175,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             </div>
             <div className="pt-2 flex space-x-2">
               <a
-                href="https://wa.me/919876543210?text=Hello%20MG%20Glass%20Traders,%20I'm%20interested%20in%20automotive%20glass%20repair."
+                href="https://wa.me/919324187807?text=Hello%20MG%20Glass%20Traders,%20I'm%20interested%20in%20automotive%20glass%20repair."
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center space-x-1.5 px-3 py-1.5 rounded bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition"
