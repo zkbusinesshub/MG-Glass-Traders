@@ -1,0 +1,6 @@
+{
+  "name": "MG Glass Traders",
+  "description": "Premium Automotive Glass Business Website and Management System for MG Glass Traders, featuring products catalog, branch management, quote requests, and an advanced role-based management panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
